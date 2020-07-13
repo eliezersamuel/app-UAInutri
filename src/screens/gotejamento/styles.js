@@ -40,4 +40,24 @@ export const Corpo = styled.View`
 	flex-direction: column;
 `;
 
-export const Scroll = styled.ScrollView``;
+export const SelectView = styled.View`
+
+`;
+
+export const PickerLabel = styled.Text`
+	font-weight: bold;
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: 10px;
+
+`;
+
+export const PickerView = styled.View`
+	align-items: center;
+`;
+
+export const ComponentView = styled.View`
+	align-items: center;
+	justify-content: center;
+	width: 350px;
+`;

@@ -40,10 +40,6 @@ export const Corpo = styled.View`
 	flex-direction: column;
 `;
 
-export const Scroll = styled.ScrollView`
-	width: 95%;
-`;
-
 export const BlocoSexoCor = styled.View`
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -150,4 +146,10 @@ export const RespostaTextoResp = styled.Text`
 	font-size: 20px;
     color: #000;
     font-weight: bold;
+`;
+
+export const TextoTooltip = styled.Text`
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
 `;

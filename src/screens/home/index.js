@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import {KeyboardAvoidingView} from 'react-native'; 
 import * as Animatable from 'react-native-animatable';
+import { Tooltip } from 'react-native-elements';
+import { Feather } from '@expo/vector-icons';
+import {ScrollView} from 'react-native';
 
 import { 
   Wrapper,
@@ -9,7 +12,6 @@ import {
   Img,
   Titulo,
   Corpo,
-  Scroll,
   BlocoSexoCorInputs,
   BlocoSexoCor,
   BlocoInputBotao,
@@ -22,6 +24,7 @@ import {
   Formulario,
   Botao,
   RotuloBotao,
+  TextoTooltip,
   } from './styles';
 
 import {CheckBox} from 'react-native-elements';
@@ -58,7 +61,7 @@ export default function Home() {
           </Header>
         
           <Corpo>
-          <Scroll>
+          <ScrollView>
 
             <BlocoSexoCorInputs>
             <Animatable.View animation="slideInLeft" duration={1000}>
@@ -115,6 +118,9 @@ export default function Home() {
 
                 <RotuloFormularioLado>
                 <Rotulos>Idade: </Rotulos>
+                  <Tooltip popover={<TextoTooltip>Idade em anos.</TextoTooltip>}>
+                    <Feather name="help-circle" size={18} color="white" />
+                  </Tooltip>
                 <Formulario
                   placeholder='Idade'
                   returnKeyType='next'
@@ -128,8 +134,11 @@ export default function Home() {
 
                 <RotuloFormularioLado>
                 <Rotulos>Aj: </Rotulos>
+                  <Tooltip popover={<TextoTooltip>Altura do Joelho em cm.</TextoTooltip>}>
+                    <Feather name="help-circle" size={18} color="white" />
+                  </Tooltip>                
                 <Formulario
-                  placeholder='AJ'
+                  placeholder='AJ em cm'
                   returnKeyType='next'
                   placeholderTextColor='#B4BCC2'
                   textAlign={'center'}
@@ -141,8 +150,11 @@ export default function Home() {
 
                 <RotuloFormularioLado>
                 <Rotulos>Cb: </Rotulos>
+                  <Tooltip popover={<TextoTooltip>Circunferência do Braço em cm.</TextoTooltip>}>
+                    <Feather name="help-circle" size={18} color="white" />
+                  </Tooltip>
                 <Formulario
-                  placeholder='CB'
+                  placeholder='CB em cm'
                   returnKeyType='next'
                   placeholderTextColor='#B4BCC2'
                   textAlign={'center'}
@@ -154,8 +166,11 @@ export default function Home() {
                 
                 <RotuloFormularioLado>
                 <Rotulos>Cp: </Rotulos>
+                  <Tooltip popover={<TextoTooltip>Circunferência da panturrilha em cm.</TextoTooltip>}>
+                    <Feather name="help-circle" size={18} color="white" />
+                  </Tooltip>
                 <Formulario
-                  placeholder='CP'
+                  placeholder='CP em cm'
                   returnKeyType='done'
                   placeholderTextColor='#B4BCC2'
                   textAlign={'center'}
@@ -182,7 +197,7 @@ export default function Home() {
               <Calcular sexo={sexo} cor={cor} idade={idade} aj={aj} cb={cb} /> 
               }
 
-            </Scroll>
+            </ScrollView>
           </Corpo>
         </Wrapper>
       </Body>

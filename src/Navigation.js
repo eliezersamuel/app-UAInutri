@@ -11,16 +11,16 @@ const Tab = createBottomTabNavigator();
 
 const icons = {
     Home:{
-        lib: AntDesign,
-        name: 'home',
+        lib: MaterialCommunityIcons,
+        name: 'tape-measure',
     },
     Tmb:{
         lib: AntDesign,
         name: 'calculator',
     },
     Peso:{
-        lib: MaterialCommunityIcons,
-        name: 'scale',
+        lib: FontAwesome5,
+        name: 'crutch',
     },
     Gotejamento:{
         lib: FontAwesome5,
@@ -47,6 +47,8 @@ export default function Navigation () {
             style:{
                 backgroundColor: '#F8F8FF',
                 borderTopColor: 'rgba(248,248,255,0.2)',
+                paddingLeft: 18,
+                paddingRight: 18,
             },
             activeTintColor: '#008cba',
             inactiveTintColor: '#92929c'
@@ -56,7 +58,7 @@ export default function Navigation () {
             name="Home" 
             component={HomeScreen}
             options={{
-                title: 'Início',
+                title: ' Antropometria ',
             }}
         />
         <Tab.Screen 
@@ -70,14 +72,14 @@ export default function Navigation () {
             name="Peso" 
             component={pesoScreen}
             options={{
-                title: 'Peso',
+                title: 'Peso Amputado',
             }}
             />
         <Tab.Screen 
             name="Gotejamento" 
             component={gotejamentoScreen}
             options={{
-                title: 'Gotejamento',
+                title: 'Gotejamento ',
             }}
             />
       </Tab.Navigator>

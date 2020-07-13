@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {KeyboardAvoidingView} from 'react-native'; 
 import * as Animatable from 'react-native-animatable';
+import { Tooltip } from 'react-native-elements';
+import { Feather } from '@expo/vector-icons';
 
 import { 
   Wrapper,
@@ -22,6 +24,7 @@ import {
   Formulario,
   Botao,
   RotuloBotao,
+  TextoTooltip,
   } from './styles';
 
 import {CheckBox} from 'react-native-elements';
@@ -39,7 +42,6 @@ export default function Tmb(){
   const [idade, setIdade] = useState(0);
   const [altura, setAltura] = useState(0);
   const [peso, setPeso] = useState(0);
-
   return ( 
     <Body
     colors={['#008CBA','#258eb0']}
@@ -87,6 +89,9 @@ export default function Tmb(){
                 <Animatable.View animation="zoomIn" duration={1000}>
                 <RotuloFormularioLado>
                 <Rotulos>Idade: </Rotulos>
+                  <Tooltip popover={<TextoTooltip>Idade em anos.</TextoTooltip>}>
+                    <Feather name="help-circle" size={18} color="white" />
+                  </Tooltip>
                 <Formulario
                   placeholder='Idade'
                   returnKeyType='next'
@@ -100,6 +105,9 @@ export default function Tmb(){
 
                 <RotuloFormularioLado>
                 <Rotulos>Altura: </Rotulos>
+                  <Tooltip popover={<TextoTooltip>Altura em cm.</TextoTooltip>}>
+                    <Feather name="help-circle" size={18} color="white" />
+                  </Tooltip>
                 <Formulario
                   placeholder='Altura (cm)'
                   returnKeyType='next'
@@ -113,6 +121,9 @@ export default function Tmb(){
 
                 <RotuloFormularioLado>
                 <Rotulos>Peso: </Rotulos>
+                  <Tooltip popover={<TextoTooltip>Peso em Kg.</TextoTooltip>}>
+                    <Feather name="help-circle" size={18} color="white" />
+                  </Tooltip>
                 <Formulario
                   placeholder='Peso (Kg)'
                   returnKeyType='next'
@@ -135,7 +146,7 @@ export default function Tmb(){
               </Animatable.View>
               </BlocoInputBotao>
             
-              { flag &&
+              { flag && 
               <Calcular sexo={sexo} idade={idade} altura={altura} peso={peso} /> 
               }
 

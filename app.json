@@ -20,7 +20,11 @@
       "**/*"
     ],
     "android": {
-      "package": "com.eliezersamuel.uainutri"
+      "package": "com.eliezersamuel.uainutri",
+      "adaptiveIcon": {
+        "backgroundColor": "#008CBA",
+        "foregroundImage": "./assets/iconLogo.png"
+      }
     },
     "androidStatusBar": {
       "barStyle": "light-content",

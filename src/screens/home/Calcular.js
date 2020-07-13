@@ -28,7 +28,7 @@ export default function Calcular(props){
         else if(idade>=19 && idade<=59 && cor===true){
         peso=(aj*1.01)+(cb*2.81)-66.04;
         }
-        else if(idade>=60 && idade<=80 && cor===true){
+        else if(idade>=60 && cor===true){
         peso=(aj*1.09)+(cb*2.68)-65.51;
         }
         else{
@@ -72,7 +72,7 @@ export default function Calcular(props){
         else if(idade>=19 && idade<=59 && cor===true){
         peso=(aj*1.19)+(cb*3.14)-86.82;
         }
-        else if(idade>=60 && idade<=80 && cor===true){
+        else if(idade>=60 && cor===true){
         peso=(aj*1.10)+(cb*3.07)-75.81;
         }
         else{
